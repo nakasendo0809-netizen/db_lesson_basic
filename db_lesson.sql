@@ -27,3 +27,4 @@ SELECT name FROM people WHERE (gender=2 AND age BETWEEN 20 AND 29) OR (gender=1 
 
 SELECT name FROM people WHERE department_id=1 ORDER BY age; -- Q8.営業部に所属する人だけを年齢の昇順で取得
 
+SELECT AVG (age) AS average_age FROM people WHERE department_id=2 AND gender=2; -- Q9.開発部に所属している女性の平均年齢を取得
