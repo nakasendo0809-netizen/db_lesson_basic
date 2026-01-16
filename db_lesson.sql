@@ -30,3 +30,5 @@ SELECT name FROM people WHERE department_id=1 ORDER BY age; -- Q8.営業部に�
 SELECT AVG (age) AS average_age FROM people WHERE department_id=2 AND gender=2; -- Q9.開発部に所属している女性の平均年齢を取得
 
 SELECT p.name,d.name,r.content FROM people p INNER JOIN departments d USING (department_id) INNER JOIN reports r USING (person_id); -- Q10.名前と部署名、その人が提出した日報を取得
+
+SELECT p.name FROM people p LEFT JOIN reports r USING (person_id) WHERE r.content IS NULL; --Q11.日報を一つも提出していない人の名前一覧を取得
