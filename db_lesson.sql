@@ -22,3 +22,5 @@ UPDATE people SET department_id=5 WHERE person_id=6; -- Q4.peopleテーブルの
 SELECT name,age FROM people WHERE gender=1 ORDER BY age DESC; -- Q5.年齢の降順で男性の名前と年齢を取得
 
 -- Q6.peopleテーブルのdepartment_idが1のレコードを、created_atカラムで昇順に並び替えて、name・email・ageカラムを取得する。
+
+SELECT name FROM people WHERE (gender=2 AND age BETWEEN 20 AND 29) OR (gender=1 AND age BETWEEN 40 AND 49); --Q7.20代女性と40代男性の名前一覧を取得
